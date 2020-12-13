@@ -86,9 +86,9 @@ namespace CosmosOptimization
                     case ConsoleKey.D7:
                         await Issue7_TuneIndexingPolicy();
                         break;
-                    case ConsoleKey.D8:
+                    /* case ConsoleKey.D8:
                         await Issue8_ScaleFixedContainer();
-                        break;
+                        break; */ 
                     case ConsoleKey.Escape:
                         Console.WriteLine("Exiting...");
                         return;
@@ -119,7 +119,7 @@ namespace CosmosOptimization
             Console.WriteLine("6 - Scenario 6: Query using Streams API for Web API scenarios"); //TODO Move this out
 
             Console.WriteLine("7 - Scenario 7: Tuning indexing policy"); //TODO Move this out
-            Console.WriteLine("8 - Scenario 8: Scaling fixed containers with partition keys"); //TODO Move this out
+            //Console.WriteLine("8 - Scenario 8: Scaling fixed containers with partition keys"); //TODO Move this out
 
             Console.WriteLine("--------------------------------------------------------------------- ");
         }
@@ -131,8 +131,8 @@ namespace CosmosOptimization
             {
                 //To demo the "Why is latency high" scenario, run Scenario 1 with the region set to a Cosmos region different from the region your VM is in. For the other scenarios, set the region to your VM region. 
 
-                ApplicationRegion = "West US 2",
-                //ApplicationRegion = "East US 2",
+                ApplicationRegion = "Canada Central",
+                //ApplicationRegion = "Central India",
                 ApplicationName = "CosmosDebuggingOptimizationDemo"
             };
 
