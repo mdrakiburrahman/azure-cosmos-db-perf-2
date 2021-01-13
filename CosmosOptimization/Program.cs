@@ -161,7 +161,7 @@ namespace CosmosOptimization
 
             // Create database for partitioning demo. We set the RU/s high to simulate having a large workload with many partitions, to demo the impact of cross-partition queries on larger datasets. If you do not wish to demo Scenario 2, replace the throughput with the minimum of 400 RU/s.
             var partitionDemoDatabaseName = "PartitioningDemo";
-            Microsoft.Azure.Cosmos.Database partitioningDemoDB = await cosmosClient.CreateDatabaseIfNotExistsAsync(id: partitionDemoDatabaseName, throughput: 300000);
+            Microsoft.Azure.Cosmos.Database partitioningDemoDB = await cosmosClient.CreateDatabaseIfNotExistsAsync(id: partitionDemoDatabaseName, throughput: 40000);
             Console.WriteLine("\tCreated database {0}", partitioningDemoDB.Id);
 
             // Create 2 containers with different partition keys for Scenarios
